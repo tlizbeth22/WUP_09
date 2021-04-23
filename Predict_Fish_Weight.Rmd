@@ -14,6 +14,11 @@ require(tigerstats)
 require(tidyverse)
 ```
 
+```{r}
+Fishdata = read.csv(file = "Fish.csv")
+```
+
+
 # Introduction
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
@@ -22,9 +27,18 @@ require(tidyverse)
 ## Using only two predictor variables  
 
 
+# Perch
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
+
+```{r}
+Perchdata=filter(Fishdata, Species=="Perch")
+Perchdata = subset(Perchdata, select = Species)
+```
+
+
+
 
 #Results
 
