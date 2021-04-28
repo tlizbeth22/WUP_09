@@ -232,3 +232,5 @@ The p-value is too large to say that there is a difference between the best mode
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+Based on the selection of variables there is no real difference in using a model with two variables versus using one with all the variables. This was identified through a graphical depiction of the adjusted r-squared as well as the p-values. In conclusion, comparing the p-values of the two variable models the p-values were so small that we reject the null hypothesis that these models are beneficial in predicting the weight of the fish. The p-values associated with the anovas were large, which resluts in a failure to reject the null hypothesis. There is no difference between using the model with two variables versus the fullup models. 
