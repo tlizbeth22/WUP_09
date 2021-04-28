@@ -206,6 +206,10 @@ library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
 
+## Which is best??
+
+The model that is best is the one that uses four variables: L1, L2, H and W.
+
 ```{r}
 which.max(summary.out$adjr2)
 ```
@@ -222,6 +226,8 @@ summary(best.model)
 ```{r}
 anova(fullup,best.model)
 ```
+
+The p-value is too large to say that there is a difference between the best model which utilizes four variables and the best model that utilizes two variables. 
 
 # Discussion and Conclusion
 
