@@ -141,6 +141,8 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2
 ```
 ##Which is best?? 
 
+The best model is the one that utilizes three variables: L1, H, W.
+
 ```{r}
 which.max(summary.out$adjr2)
 ```
@@ -157,6 +159,8 @@ summary(best.model)
 ```{r}
 anova(fullup,best.model)
 ```
+
+The p-value is too large to say that there is a difference between utilizing the best model which utilizes three variables and the best model that uses two. 
 
 # Smelt
 ## Methods
