@@ -139,7 +139,9 @@ as.data.frame(summary.out$outmat)
 library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
-##Which is best?? 
+
+
+## Which is best?? 
 
 The best model is the one that utilizes three variables: L1, H, W.
 
