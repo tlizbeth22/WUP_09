@@ -73,6 +73,8 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2
   
 ##Which is best??  
 
+The best model utilizes two variables: H, W. 
+
 ```{r}
 which.max(summary.out$adjr2)
 ```
@@ -86,9 +88,13 @@ fullup <- lm(Weight~.,data=Perchdata)
 summary(best.model)
 ```
 
+The pvalue is so small which shows that this model is best.
+
 ```{r}
 anova(fullup,best.model)
 ```
+
+The p-value is 0.879 which means that there is no difference between using the model that has all of the data vs. the odel that uses 2 variables. 
 
 # Bream
 ## Methods
@@ -133,6 +139,7 @@ as.data.frame(summary.out$outmat)
 library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
+##Which is best?? 
 
 ```{r}
 which.max(summary.out$adjr2)
@@ -142,7 +149,7 @@ summary.out$which[3,]
 ```
 
 ```{r}
-best.model <- lm(Weight~Height+Width, data=Breamdata)
+best.model <- lm(Weight~Length2+Height, data=Breamdata)
 fullup <- lm(Weight~.,data=Breamdata)
 summary(best.model)
 ```
@@ -203,7 +210,7 @@ summary.out$which[3,]
 ```
 
 ```{r}
-best.model <- lm(Weight~Height+Width, data=Smeltdata)
+best.model <- lm(Weight~Length2+Width, data=Smeltdata)
 fullup <- lm(Weight~.,data=Smeltdata)
 summary(best.model)
 ```
